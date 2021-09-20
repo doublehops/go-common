@@ -7,7 +7,7 @@ import (
 )
 
 // ConvertToCurrency will convert a float into human-readable currency string. The delimiters are
-// optional but by will default will convert 123567.89 to format of 123,456.69
+// optional but by default will convert 123567.89 to format of 123,456.69
 func ConvertToCurrency(value float64, delimiters ...string) string {
 	var dollarDelimiter string = ","
 	var centDelimiter string = "."

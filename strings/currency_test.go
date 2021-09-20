@@ -1,6 +1,9 @@
 package strings
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestAddSeparator(t *testing.T) {
 	var tests = []struct{
@@ -31,7 +34,7 @@ func TestAddEuropeanSeparator(t *testing.T) {
 	}{
 		{"hundreds", 134.81, "134,81"},
 		{"thousands", 1234.8012, "1.234,80"},
-		{"millions", 12345678.80, "12.345.678,80"},
+		{"millions", 12345678, "12.345.678,00"},
 	}
 
 	for _, test := range tests {
@@ -42,4 +45,11 @@ func TestAddEuropeanSeparator(t *testing.T) {
 			}
 		})
 	}
+}
+
+// Examples
+func ExampleConvertToCurrency() {
+	val := ConvertToCurrency(123456.78)
+	fmt.Println(val)
+	// Output: 123,456.78
 }
