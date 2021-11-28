@@ -11,3 +11,10 @@ func sliceContains(key string, slice []string) bool {
 
 	return false
 }
+
+// KeyStringExists will check that a key exists in the given map
+func KeyStringExists(key string, m map[string]interface{}) bool {
+
+	_, ok := m[key]
+	return ok
+}
