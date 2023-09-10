@@ -1,4 +1,4 @@
-package strings
+package str
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func ConvertToCurrency(value float64, delimiters ...string) string {
 	dollars := fmt.Sprintf("%f", d)
 	cents := fmt.Sprintf("%f", c)
 	dollars = dollars[0:strings.Index(dollars, ".")] // get string before `.`
-	cents = cents[strings.Index(cents, ".")+1:4] // get string after `.`
+	cents = cents[strings.Index(cents, ".")+1 : 4]   // get string after `.`
 	str := dollars
 
 	var newValue string

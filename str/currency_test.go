@@ -1,4 +1,4 @@
-package strings
+package str
 
 import (
 	"fmt"
@@ -6,9 +6,9 @@ import (
 )
 
 func TestAddSeparator(t *testing.T) {
-	var tests = []struct{
-		Name string
-		Value float64
+	var tests = []struct {
+		Name     string
+		Value    float64
 		Expected string
 	}{
 		{"hundreds", 134.81122, "134.81"},
@@ -27,9 +27,9 @@ func TestAddSeparator(t *testing.T) {
 }
 
 func TestAddEuropeanSeparator(t *testing.T) {
-	var tests = []struct{
-		Name string
-		Value float64
+	var tests = []struct {
+		Name     string
+		Value    float64
 		Expected string
 	}{
 		{"hundreds", 134.81, "134,81"},
